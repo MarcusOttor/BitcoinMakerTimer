@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                fontPath="fonts/ProximaNovaRegular.otf"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/arcProgress"
+                android:layout_width="124dp"
+                app:arc_suffix_text="60"
+                app:arc_suffix_text_size="16sp"
+                app:arc_text_size="36sp"
+                app:arc_progress="25"
+                app:arc_max="30"
+                app:arc_stroke_width="6dp"
+                app:arc_finished_color="@color/colorPrimaryDark"
+                app:arc_unfinished_color="@android:color/white"
+                app:arc_bottom_text=""
+                app:arc_bottom_text_size="18sp"
+                app:arc_text_color="@android:color/white"
+                android:layout_height="124dp" />
+
+            <ImageView
+                android:layout_marginTop="6dp"
+                android:id="@+id/claim"
+                android:src="@drawable/claim"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/rateUs"
+                    android:src="@drawable/rate_us"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+
+                <ImageView
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/share"
+                    android:src="@drawable/share"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+
+                <ImageView
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/logOut"
+                    android:src="@drawable/log_out"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/ticketcsGame"
+                    android:src="@drawable/tickets"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/offers"
+                    android:src="@drawable/more_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/giftCards"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/gift_cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/toolbar" />
+</FrameLayout>
